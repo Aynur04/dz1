@@ -1,0 +1,11 @@
+import pandas as pd
+import random
+st = ['robot'] * 10
+lst += ['human'] * 10
+random.shuffle(lst)
+data = pd.DataFrame({'whoAmI': lst})
+is_robot = (data['whoAmI'] == 'robot').astype(int)
+is_human = (data['whoAmI'] == 'human').astype(int)
+new_data = pd.DataFrame({'is_robot': is_robot, 'is_human': is_human})
+print(new_data.head())
+
